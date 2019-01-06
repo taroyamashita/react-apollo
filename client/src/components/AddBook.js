@@ -12,9 +12,8 @@ class AddBook extends Component {
     };
   }
   displayAuthors() {
-    /// diaplay all the authors
+    /// display all the authors
     var data = this.props.getAuthorsQuery;
-    console.log(this.props);
     if (data.loading) {
       return <option disabled>Loading authors</option>;
     } else {
@@ -31,6 +30,7 @@ class AddBook extends Component {
   submitForm(e) {
     e.preventDefault();
     this.props.addBookMutation();
+    console.log(this.props);
   }
   render() {
     return (
